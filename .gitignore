@@ -1,6 +1,47 @@
-*.log
-node_modules/
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore environment files
 .env
+.env.*
+
+# Ignore OS-specific files
 .DS_Store
+Thumbs.db
+
+# Ignore IDE/editor files
 .vscode/
+.idea/
+
+# Ignore virtual environments
+venv/
+env/
 .venv/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Ignore test coverage reports
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore compiled shared libraries
+*.so
+
+# Ignore screenshots and automation artifacts
+*.png
+assets/*
+!assets/.keep  # If you want to keep the folder structure
+
+# Ignore config backups
+*.bak
+*.old
