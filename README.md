@@ -15,9 +15,9 @@ The purpose of this script is to prevent account deletion due to inactivity by p
 
 ## Setup
 
-1. Install dependencies:
+1. Install dependencies using `requirements.txt`:
    ```bash
-   pip install pyautogui python-dotenv pillow
+   pip install -r requirements.txt
    ```
 2. Create a `.env` file in the root directory and define your emails using the EMAIL_LIST variable:
    ```.env
