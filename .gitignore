@@ -37,11 +37,6 @@ coverage.xml
 # Ignore compiled shared libraries
 *.so
 
-# Ignore screenshots and automation artifacts
-*.png
-assets/*
-!assets/.keep  # If you want to keep the folder structure
-
 # Ignore config backups
 *.bak
 *.old
