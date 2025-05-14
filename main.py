@@ -1,14 +1,10 @@
-from multiprocessing import Value
+from typing import List
 import time
 import pyautogui
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 GMAIL_URL = "https://mail.google.com/"
 SLOWDOWN_DURATION = 0.01 # seconds
-EMAILS = os.getenv("EMAIL_LIST")
+EMAILS_FILE_NAME = "emails.txt"
 
 def open_webbrowser():
     # Open brave
@@ -61,17 +57,23 @@ def login(email: str) -> None:
     pyautogui.hotkey("ctrl", "w")
     pyautogui.hotkey("ctrl", "w")
 
+def get_emails() -> List[str]:
+    try:
+        with open(EMAILS_FILE_NAME, 'r') as file:
+            file_contents = file.readlines()
+            return [line.rstrip('\n') for line in file_contents]
+    except FileNotFoundError:
+        return []
+    
 
 def main():
     pyautogui.FAILSAFE = True
     input("Please login to bitwarden before beginning... (press enter when ready)")
-
-    if EMAILS is None:
-        raise ValueError("EMAIL_LIST enviornment variable is empty or missing.")
     
-    for email in EMAILS.split(','):
+    emails = get_emails()
+    for email in emails:
         login(email)
-    
+
     
 if __name__ == "__main__":
     main()

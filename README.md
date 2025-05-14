@@ -15,17 +15,16 @@ The purpose of this script is to prevent account deletion due to inactivity by p
 
 ## Setup
 
-1. Install dependencies using `requirements.txt`:
+1. Create a virtual environment and then install dependencies using `requirements.txt`:
    ```bash
+   python3 -m venv .venv
    pip install -r requirements.txt
    ```
-2. Create a `.env` file in the root directory and define your emails using the EMAIL_LIST variable:
-   ```.env
-   EMAIL_LIST=johndoe@gmail.com,janedoe@gmail.com,johnsmith@gmail.com
-   ```
-3. Make sure your .env file is not tracked by git
-   ```.gitignore
-   .env
+2. Populate `emails.txt` with your emails, making sure that each email is on a new line
+   ```txt
+   johndoe@gmail.com
+   janedoe@gmail.com
+   johnsmith@gmail.com
    ```
 
 ## How to Use
