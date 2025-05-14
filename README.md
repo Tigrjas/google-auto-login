@@ -33,4 +33,4 @@ The purpose of this script is to prevent account deletion due to inactivity by p
    python main.py
    ```
 2. When prompted, ensure you are logged into Bitwarden and press `Enter` to continue.
-3. The script will open an incognito window in Brave, navigate to Gmail, and log into each email listed in the .env file
+3. The script will open an incognito window in Brave, navigate to Gmail, and log into each email listed in the emails.txt file
